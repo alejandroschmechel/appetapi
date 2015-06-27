@@ -1,0 +1,57 @@
+<%= form_for(@entry) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :pet_name %><br>
+    <%= f.text_field :pet_name %>
+  </div>
+  <div class="field">
+    <%= f.label :pet_breed %><br>
+    <%= f.text_field :pet_breed %>
+  </div>
+  <div class="field">
+    <%= f.label :pet_color %><br>
+    <%= f.text_field :pet_color %>
+  </div>
+  <div class="field">
+    <%= f.label :observation %><br>
+    <%= f.text_area :observation %>
+  </div>
+  <div class="field">
+    <%= f.label :location_x %><br>
+    <%= f.text_field :location_x %>
+  </div>
+  <div class="field">
+    <%= f.label :location_y %><br>
+    <%= f.text_field :location_y %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :entry_type %><br>
+    <%= f.text_field :entry_type %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

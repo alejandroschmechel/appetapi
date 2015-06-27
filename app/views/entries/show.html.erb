@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @entry.title %>
+</p>
+
+<p>
+  <strong>Pet name:</strong>
+  <%= @entry.pet_name %>
+</p>
+
+<p>
+  <strong>Pet breed:</strong>
+  <%= @entry.pet_breed %>
+</p>
+
+<p>
+  <strong>Pet color:</strong>
+  <%= @entry.pet_color %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @entry.observation %>
+</p>
+
+<p>
+  <strong>Location x:</strong>
+  <%= @entry.location_x %>
+</p>
+
+<p>
+  <strong>Location y:</strong>
+  <%= @entry.location_y %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag @entry.picture.url(:thumb) %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @entry.entry_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @entry.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

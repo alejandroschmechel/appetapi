@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Pet name</th>
+      <th>Pet breed</th>
+      <th>Pet color</th>
+      <th>Observation</th>
+      <th>Location x</th>
+      <th>Location y</th>
+      <th>Picture</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td><%= entry.title %></td>
+        <td><%= entry.pet_name %></td>
+        <td><%= entry.pet_breed %></td>
+        <td><%= entry.pet_color %></td>
+        <td><%= entry.observation %></td>
+        <td><%= entry.location_x %></td>
+        <td><%= entry.location_y %></td>
+        <td><%= entry.picture %></td>
+        <td><%= entry.user_id %></td>
+        <td><%= link_to 'Show', entry %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entry', new_entry_path %>
