@@ -3,6 +3,6 @@ class Entry < ActiveRecord::Base
   do_not_validate_attachment_file_type :picture
 
   def thumb
-    picture.url(:thumb)
+    picture.url(:medium)
   end
 end
