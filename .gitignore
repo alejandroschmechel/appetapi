@@ -17,4 +17,5 @@
 /tmp
 
 .idea
-/public/system
+/public/system/entries
+/public/system/users
