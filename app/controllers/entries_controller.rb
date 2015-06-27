@@ -8,7 +8,7 @@ class EntriesController < ApplicationController
     @entries = Entry.all
     respond_to do |format|
       format.html
-      format.json { render :json => @entries.to_json(:methods => [:avatar_url]) }
+      format.json { render :json => @entries.to_json(:methods => [:thumb]) }
     end
   end
 
