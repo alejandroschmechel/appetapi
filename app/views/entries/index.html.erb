@@ -28,7 +28,7 @@
         <td><%= entry.observation %></td>
         <td><%= entry.location_x %></td>
         <td><%= entry.location_y %></td>
-        <td><%= entry.picture %></td>
+        <td><%= image_tag entry.picture.url(:thumb) %></td>
         <td><%= entry.user_id %></td>
         <td><%= link_to 'Show', entry %></td>
         <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
